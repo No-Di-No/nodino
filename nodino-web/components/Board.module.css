@@ -1,0 +1,164 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: -1rem 0 0;
+  text-transform: lowercase;
+}
+
+.roomInfo {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: -1rem 0 0;
+  letter-spacing: 0.05em;
+}
+
+.roomInfo strong {
+  color: var(--text);
+}
+
+.status {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  min-height: 1.2rem;
+}
+
+.statusTurn {
+  color: var(--text);
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background: var(--thread);
+  border-radius: 12px;
+}
+
+.subBoard {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+
+.subBoardActive {
+  border-color: var(--x-color);
+  animation: threadPulse 1.6s ease-in-out infinite;
+}
+
+.subBoardDecided {
+  opacity: 0.55;
+}
+
+@keyframes threadPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 163, 64, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(242, 163, 64, 0);
+  }
+}
+
+.cell {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-raised);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0;
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cellX {
+  color: var(--x-color);
+}
+
+.cellO {
+  color: var(--o-color);
+}
+
+.subBoardOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.4rem;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.overlayX {
+  color: var(--x-color);
+  background: rgba(20, 22, 43, 0.6);
+}
+
+.overlayO {
+  color: var(--o-color);
+  background: rgba(20, 22, 43, 0.6);
+}
+
+.overlayDraw {
+  color: var(--text-muted);
+  background: rgba(20, 22, 43, 0.6);
+  font-size: 1.4rem;
+}
+
+.resetButton {
+  background: transparent;
+  border: 1px solid var(--thread-bright);
+  color: var(--text);
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  border-color: var(--x-color);
+}
+
+.errorText {
+  color: var(--x-color);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  min-height: 1rem;
+}

@@ -1,0 +1,14 @@
+# dipendenze
+node_modules/
+
+# build
+.next/
+dist/
+tsconfig.tsbuildinfo
+
+# variabili d'ambiente locali (contengono valori specifici della tua macchina)
+.env.local
+.env
+
+# varie
+.DS_Store

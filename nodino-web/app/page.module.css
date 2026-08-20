@@ -1,0 +1,139 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.4rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: -1rem 0 0;
+  text-transform: lowercase;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--thread);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--thread);
+}
+
+.primaryButton {
+  background: var(--x-color);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  filter: brightness(1.08);
+}
+
+.joinRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.codeInput {
+  flex: 1;
+  background: var(--surface-raised);
+  border: 1px solid var(--thread);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  min-width: 0;
+}
+
+.codeInput::placeholder {
+  color: var(--text-muted);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.secondaryButton {
+  background: transparent;
+  border: 1px solid var(--thread-bright);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  border-color: var(--x-color);
+}
+
+.waitingCode {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  letter-spacing: 0.15em;
+  color: var(--x-color);
+  margin: 0;
+}
+
+.waitingHint {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.errorText {
+  color: var(--x-color);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.endMessage {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
