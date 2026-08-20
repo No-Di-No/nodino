@@ -1,3 +1,0 @@
-nodino-web\node_modules
-nodino-web\.next
-nodino-server\node_modules
